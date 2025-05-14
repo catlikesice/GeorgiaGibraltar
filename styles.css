@@ -1,0 +1,104 @@
+/* Root styling inspired by Georgian embroidery themes */
+:root {
+  --primary: #800000;     /* Deep red, like traditional Saperavi wine */
+  --accent: #d4af37;      /* Gold – evokes embroidery thread */
+  --background: #fff9f0;  /* Soft parchment tone */
+  --text: #333;
+  --font-embroidery: 'Georgia', serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-embroidery);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 8px double var(--accent);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  background: var(--accent);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  border-left: 6px solid var(--primary);
+  padding-left: 1rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.product {
+  background: white;
+  border: 2px dotted var(--accent);
+  padding: 1rem;
+  flex: 1 1 200px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border-top: 4px double var(--accent);
+}
