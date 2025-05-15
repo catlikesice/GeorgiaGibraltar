@@ -12,21 +12,27 @@ body {
   font-family: var(--font-embroidery);
   background-color: var(--background);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 header {
   background-color: var(--primary);
   color: white;
-  padding: 2rem;
+  padding: 1.5rem 0;
   text-align: center;
-  border-bottom: 8px double var(--accent);
+  border-bottom: 4px solid var(--accent);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 nav {
@@ -41,13 +47,18 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: var(--primary);
   font-weight: bold;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -55,9 +66,15 @@ main {
 }
 
 section {
-  margin-bottom: 3rem;
-  border-left: 6px solid var(--primary);
+  margin-bottom: 2.5rem;
   padding-left: 1rem;
+}
+
+section h2 {
+  border-left: 4px solid var(--primary);
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .product-list {
@@ -68,10 +85,16 @@ section {
 
 .product {
   background: white;
-  border: 2px dotted var(--accent);
+  border: 1px solid #ddd;
   padding: 1rem;
   flex: 1 1 200px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 form {
@@ -83,7 +106,9 @@ form {
 input, textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
+  border-radius: 4px;
   font-family: inherit;
+  font-size: 1rem;
 }
 
 button {
@@ -93,6 +118,12 @@ button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #a00000;
 }
 
 footer {
@@ -100,5 +131,6 @@ footer {
   padding: 1rem;
   background: var(--primary);
   color: white;
-  border-top: 4px double var(--accent);
+  border-top: 4px solid var(--accent);
+  font-size: 0.9rem;
 }
